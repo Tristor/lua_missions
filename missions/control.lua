@@ -3,7 +3,7 @@ function test_if_then()
   if true then
     result = 'true value'
   end
-  assert_equal(__, result)
+  assert_equal('true value', result)
 end
 
 function test_if_then_else()
@@ -13,7 +13,7 @@ function test_if_then_else()
   else
     result = 'false value'
   end
-  assert_equal(__, result)
+  assert_equal('true value', result)
 end
 
 function test_if_then_elseif_else()
@@ -25,7 +25,7 @@ function test_if_then_elseif_else()
   else
     result = 'default value'
   end
-  assert_equal(__, result)
+  assert_equal('second value', result)
 end
 
 function test_if_not_statement()
@@ -33,12 +33,12 @@ function test_if_not_statement()
   if not false then
     result = 'updated value'
   end
-  assert_equal(__, result)
+  assert_equal('updated value', result)
 end
 
 function test_and_or_expression()
-  assert_equal( __,  (true and 'true value' or 'false value') )
-  assert_equal( __, (false and 'true value' or 'false value') )
+  assert_equal( 'true value',  (true and 'true value' or 'false value') )
+  assert_equal( 'false value', (false and 'true value' or 'false value') )
 end
 
 function test_while()
@@ -47,7 +47,7 @@ function test_while()
     result = result * i
     i = i + 1
   end
-  assert_equal(__, result)
+  assert_equal( 512,512 , result)
 end
 
 function test_break()
